@@ -1,0 +1,101 @@
+customer_id,name,email,city,state,country,registration_date,total_orders,total_spent,customer_tier
+CUST-001,Acme Corp,customer1@example.com,Los Angeles,NY,USA,2022-10-04,40,1275.95,Bronze
+CUST-002,Enterprise Ltd,customer2@example.com,Chicago,CA,USA,2022-08-23,8,23444.61,Platinum
+CUST-003,Mega Corp,customer3@example.com,Phoenix,FL,USA,2022-11-09,7,16646.41,Bronze
+CUST-004,Tech Solutions,customer4@example.com,Los Angeles,TX,USA,2022-02-25,48,25495.96,Platinum
+CUST-005,New Company,customer5@example.com,Chicago,PA,USA,2022-10-18,35,14022.82,Platinum
+CUST-006,Global Industries,customer6@example.com,Chicago,AZ,USA,2022-08-27,50,35701.48,Gold
+CUST-007,Mega Corp,customer7@example.com,Philadelphia,CA,USA,2022-08-04,35,9062.12,Gold
+CUST-008,Enterprise Ltd,customer8@example.com,New York,PA,USA,2022-05-07,46,39047.33,Silver
+CUST-009,Small Business,customer9@example.com,Philadelphia,FL,USA,2022-05-09,34,13138.7,Platinum
+CUST-010,Startup Co,customer10@example.com,San Antonio,AZ,USA,2022-05-06,7,32065.64,Platinum
+CUST-011,New Company,customer11@example.com,Chicago,WA,USA,2022-12-16,22,5266.74,Silver
+CUST-012,Tech Solutions,customer12@example.com,Los Angeles,WA,USA,2022-03-02,14,6921.72,Gold
+CUST-013,Old Business,customer13@example.com,San Antonio,WA,USA,2022-04-04,43,48121.54,Bronze
+CUST-014,Enterprise Ltd,customer14@example.com,Philadelphia,NY,USA,2022-07-19,17,3394.71,Platinum
+CUST-015,Tech Solutions,customer15@example.com,Chicago,WA,USA,2022-09-18,41,26149.4,Gold
+CUST-016,XYZ Inc,customer16@example.com,Philadelphia,IL,USA,2022-11-30,20,8194.72,Gold
+CUST-017,Mega Corp,customer17@example.com,Philadelphia,TX,USA,2022-06-08,13,10681.45,Platinum
+CUST-018,Small Business,customer18@example.com,Los Angeles,WA,USA,2022-04-06,45,46484.72,Gold
+CUST-019,Old Business,customer19@example.com,San Diego,TX,USA,2022-09-09,43,7943.5,Silver
+CUST-020,Acme Corp,customer20@example.com,Chicago,IL,USA,2022-08-31,16,3666.37,Silver
+CUST-021,Old Business,customer21@example.com,Philadelphia,IL,USA,2022-02-03,30,28935.0,Platinum
+CUST-022,Tech Solutions,customer22@example.com,Chicago,WA,USA,2022-11-07,42,20930.66,Platinum
+CUST-023,Acme Corp,customer23@example.com,Los Angeles,AZ,USA,2022-01-05,34,42756.44,Bronze
+CUST-024,Startup Co,customer24@example.com,Chicago,AZ,USA,2022-05-31,44,34145.89,Platinum
+CUST-025,Enterprise Ltd,customer25@example.com,San Diego,PA,USA,2022-04-21,7,26459.56,Platinum
+CUST-026,Global Industries,customer26@example.com,San Antonio,PA,USA,2022-02-16,42,28538.56,Bronze
+CUST-027,Startup Co,customer27@example.com,San Diego,NY,USA,2022-08-06,17,25201.62,Silver
+CUST-028,Old Business,customer28@example.com,Chicago,PA,USA,2022-01-28,47,9323.79,Gold
+CUST-029,Mega Corp,customer29@example.com,Houston,IL,USA,2022-11-26,1,4750.38,Silver
+CUST-030,XYZ Inc,customer30@example.com,Phoenix,TX,USA,2022-12-04,28,14846.85,Bronze
+CUST-031,Small Business,customer31@example.com,Houston,TX,USA,2022-05-28,33,7793.0,Bronze
+CUST-032,Global Industries,customer32@example.com,San Antonio,IL,USA,2022-06-25,40,19577.21,Gold
+CUST-033,Small Business,customer33@example.com,Houston,FL,USA,2022-11-17,49,46423.56,Gold
+CUST-034,Enterprise Ltd,customer34@example.com,Los Angeles,NY,USA,2022-12-06,43,25940.68,Silver
+CUST-035,Tech Solutions,customer35@example.com,Chicago,PA,USA,2022-12-23,35,41666.67,Silver
+CUST-036,Old Business,customer36@example.com,San Diego,CA,USA,2022-04-20,3,12755.27,Gold
+CUST-037,Old Business,customer37@example.com,New York,CA,USA,2022-01-23,15,29954.6,Platinum
+CUST-038,Mega Corp,customer38@example.com,San Antonio,IL,USA,2022-08-14,19,33559.59,Bronze
+CUST-039,Enterprise Ltd,customer39@example.com,San Antonio,CA,USA,2022-08-31,40,40186.16,Gold
+CUST-040,Old Business,customer40@example.com,San Diego,CA,USA,2022-12-13,2,36953.21,Platinum
+CUST-041,New Company,customer41@example.com,Philadelphia,PA,USA,2022-05-08,28,28468.03,Silver
+CUST-042,Global Industries,customer42@example.com,San Antonio,TX,USA,2022-09-27,5,12098.03,Bronze
+CUST-043,Tech Solutions,customer43@example.com,San Antonio,TX,USA,2022-05-02,24,3385.76,Gold
+CUST-044,Mega Corp,customer44@example.com,Philadelphia,TX,USA,2022-11-26,7,34372.61,Silver
+CUST-045,Mega Corp,customer45@example.com,Houston,IL,USA,2022-01-02,8,47770.35,Bronze
+CUST-046,XYZ Inc,customer46@example.com,New York,CA,USA,2022-03-01,20,47403.41,Bronze
+CUST-047,XYZ Inc,customer47@example.com,Philadelphia,IL,USA,2022-02-16,42,27970.55,Platinum
+CUST-048,Global Industries,customer48@example.com,Philadelphia,CA,USA,2022-05-27,41,28458.67,Silver
+CUST-049,Small Business,customer49@example.com,Phoenix,PA,USA,2022-03-22,33,43864.54,Bronze
+CUST-050,Global Industries,customer50@example.com,New York,WA,USA,2022-03-25,44,10027.54,Gold
+CUST-051,Old Business,customer51@example.com,New York,FL,USA,2022-08-29,22,9775.9,Bronze
+CUST-052,XYZ Inc,customer52@example.com,Phoenix,WA,USA,2022-02-05,39,10075.27,Platinum
+CUST-053,XYZ Inc,customer53@example.com,Phoenix,WA,USA,2022-11-23,24,31118.04,Gold
+CUST-054,Small Business,customer54@example.com,Los Angeles,PA,USA,2022-09-26,28,20559.46,Platinum
+CUST-055,Enterprise Ltd,customer55@example.com,Chicago,AZ,USA,2022-02-02,41,29608.18,Bronze
+CUST-056,Startup Co,customer56@example.com,San Antonio,PA,USA,2022-02-13,6,11911.9,Gold
+CUST-057,Tech Solutions,customer57@example.com,Philadelphia,PA,USA,2022-07-25,34,15582.98,Gold
+CUST-058,Enterprise Ltd,customer58@example.com,Los Angeles,WA,USA,2022-05-03,14,4683.97,Silver
+CUST-059,Old Business,customer59@example.com,Los Angeles,CA,USA,2022-11-27,5,33031.83,Silver
+CUST-060,Tech Solutions,customer60@example.com,New York,WA,USA,2022-01-02,16,7758.2,Platinum
+CUST-061,Mega Corp,customer61@example.com,San Diego,FL,USA,2022-12-02,45,13518.39,Silver
+CUST-062,Global Industries,customer62@example.com,New York,WA,USA,2022-07-06,16,32651.77,Silver
+CUST-063,New Company,customer63@example.com,Los Angeles,NY,USA,2022-06-30,45,35551.05,Platinum
+CUST-064,Mega Corp,customer64@example.com,Chicago,IL,USA,2022-10-17,37,42786.97,Gold
+CUST-065,Mega Corp,customer65@example.com,New York,FL,USA,2022-05-07,16,33274.0,Platinum
+CUST-066,Old Business,customer66@example.com,Philadelphia,WA,USA,2022-03-23,18,37713.55,Platinum
+CUST-067,Old Business,customer67@example.com,San Diego,FL,USA,2022-12-08,41,17876.8,Silver
+CUST-068,Global Industries,customer68@example.com,Chicago,WA,USA,2022-06-13,6,39996.92,Silver
+CUST-069,Small Business,customer69@example.com,Los Angeles,FL,USA,2022-09-11,4,48306.13,Gold
+CUST-070,Acme Corp,customer70@example.com,San Antonio,FL,USA,2022-11-08,7,14426.25,Platinum
+CUST-071,New Company,customer71@example.com,New York,CA,USA,2022-07-21,2,35746.53,Silver
+CUST-072,New Company,customer72@example.com,Chicago,CA,USA,2022-10-31,22,43151.05,Bronze
+CUST-073,Enterprise Ltd,customer73@example.com,New York,WA,USA,2022-05-31,45,16998.04,Bronze
+CUST-074,Mega Corp,customer74@example.com,Philadelphia,FL,USA,2022-03-16,16,34594.94,Bronze
+CUST-075,New Company,customer75@example.com,New York,PA,USA,2022-01-18,12,17101.4,Silver
+CUST-076,Enterprise Ltd,customer76@example.com,San Antonio,CA,USA,2022-01-23,24,12177.58,Bronze
+CUST-077,Small Business,customer77@example.com,Phoenix,WA,USA,2022-01-27,35,38646.75,Platinum
+CUST-078,Tech Solutions,customer78@example.com,Houston,WA,USA,2022-12-18,30,23616.52,Bronze
+CUST-079,XYZ Inc,customer79@example.com,Los Angeles,TX,USA,2022-08-20,31,19954.89,Silver
+CUST-080,Old Business,customer80@example.com,Philadelphia,FL,USA,2022-03-17,10,7243.81,Gold
+CUST-081,Startup Co,customer81@example.com,Philadelphia,TX,USA,2022-10-01,28,21915.79,Platinum
+CUST-082,Tech Solutions,customer82@example.com,Houston,AZ,USA,2022-03-18,44,11523.4,Platinum
+CUST-083,Acme Corp,customer83@example.com,New York,PA,USA,2022-04-26,9,45454.4,Silver
+CUST-084,New Company,customer84@example.com,Houston,IL,USA,2022-12-18,38,13151.48,Bronze
+CUST-085,Global Industries,customer85@example.com,Philadelphia,CA,USA,2022-09-27,22,14520.15,Platinum
+CUST-086,Acme Corp,customer86@example.com,Phoenix,CA,USA,2022-09-26,8,16802.33,Platinum
+CUST-087,Enterprise Ltd,customer87@example.com,Chicago,IL,USA,2022-03-30,6,7758.61,Gold
+CUST-088,Enterprise Ltd,customer88@example.com,Chicago,TX,USA,2022-06-14,15,33220.18,Gold
+CUST-089,XYZ Inc,customer89@example.com,Houston,TX,USA,2022-09-30,11,33159.89,Bronze
+CUST-090,Acme Corp,customer90@example.com,Chicago,IL,USA,2022-08-27,38,33385.17,Gold
+CUST-091,Global Industries,customer91@example.com,San Diego,TX,USA,2022-11-18,26,30696.48,Bronze
+CUST-092,Tech Solutions,customer92@example.com,Phoenix,CA,USA,2022-04-19,41,1505.64,Bronze
+CUST-093,Startup Co,customer93@example.com,San Antonio,AZ,USA,2022-09-19,45,41442.72,Silver
+CUST-094,Tech Solutions,customer94@example.com,Chicago,NY,USA,2022-07-09,16,8082.8,Silver
+CUST-095,Startup Co,customer95@example.com,Los Angeles,AZ,USA,2022-04-26,24,31393.76,Platinum
+CUST-096,Tech Solutions,customer96@example.com,Los Angeles,PA,USA,2022-07-18,5,13756.05,Platinum
+CUST-097,New Company,customer97@example.com,San Antonio,CA,USA,2022-04-14,25,2857.58,Gold
+CUST-098,Startup Co,customer98@example.com,San Antonio,FL,USA,2022-09-21,42,18784.84,Platinum
+CUST-099,Startup Co,customer99@example.com,Chicago,AZ,USA,2022-06-06,31,44698.6,Bronze
+CUST-100,Small Business,customer100@example.com,Phoenix,IL,USA,2022-06-20,24,48838.62,Gold
