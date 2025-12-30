@@ -47,13 +47,18 @@ export function DataSourceList() {
         message: err.message,
         response: err.response,
         status: err.response?.status,
-        data: err.response?.data
+        data: err.response?.data,
+        code: err.code,
+        request: err.request
       });
       
       // Safely extract error message
       let errorMessage = 'Failed to load data sources.';
       
-      if (err) {
+      // Check for network errors (no response received)
+      if (err.code === 'ERR_NETWORK' || err.message?.includes('Network Error') || err.message?.includes('Failed to fetch') || (!err.response && err.request)) {
+        errorMessage = 'Network Error: Cannot connect to backend API. Please ensure the backend is running on http://localhost:8000';
+      } else if (err) {
         if (err.response?.status === 401) {
           errorMessage = 'Invalid API key. Please check your API key in Settings.';
         } else if (err.response?.status === 403) {
@@ -131,26 +136,46 @@ export function DataSourceList() {
         <p className="text-sm text-red-800 font-medium mb-2">Error loading data sources</p>
         <p className="text-sm text-red-700">{errorText}</p>
         
-        {!apiKey && (
+        {(!apiKey || errorText.includes('Network Error') || errorText.includes('Cannot connect')) && (
           <div className="mt-3 p-3 bg-yellow-50 border border-yellow-200 rounded">
-            <p className="text-xs text-yellow-800 font-medium mb-1">No API key configured</p>
-            <p className="text-xs text-yellow-700">
-              Data sources are filtered by client. You need to set the API key for the client that owns the data sources.
+            <p className="text-xs text-yellow-800 font-medium mb-1">
+              {!apiKey ? 'No API key configured' : 'Connection Issue'}
             </p>
-            <p className="text-xs text-yellow-700 mt-1 mb-2">
-              Quick setup: Use the default Demo Client API key (if using Docker setup).
-            </p>
-            <button
-              onClick={() => {
-                const defaultApiKey = 'M_cBEte-4FfupNUsHhe_NjgV6fraEmMw-GubfjQiFxQ';
-                localStorage.setItem('apiKey', defaultApiKey);
-                alert('API key set! Refreshing page...');
-                window.location.reload();
-              }}
-              className="px-3 py-1 bg-green-600 text-white rounded text-xs hover:bg-green-700"
-            >
-              Use Default API Key (Demo Client)
-            </button>
+            {!apiKey ? (
+              <>
+                <p className="text-xs text-yellow-700">
+                  Data sources are filtered by client. You need to set the API key for the client that owns the data sources.
+                </p>
+                <p className="text-xs text-yellow-700 mt-1 mb-2">
+                  Quick setup: Use the default Demo Client API key (if using Docker setup).
+                </p>
+                <button
+                  onClick={() => {
+                    const defaultApiKey = 'M_cBEte-4FfupNUsHhe_NjgV6fraEmMw-GubfjQiFxQ';
+                    localStorage.setItem('apiKey', defaultApiKey);
+                    alert('API key set! Refreshing page...');
+                    window.location.reload();
+                  }}
+                  className="px-3 py-1 bg-green-600 text-white rounded text-xs hover:bg-green-700"
+                >
+                  Use Default API Key (Demo Client)
+                </button>
+              </>
+            ) : (
+              <>
+                <p className="text-xs text-yellow-700 mb-2">
+                  The frontend cannot connect to the backend API at http://localhost:8000
+                </p>
+                <p className="text-xs text-yellow-700 mb-2">
+                  Please verify:
+                </p>
+                <ul className="text-xs text-yellow-700 list-disc list-inside mb-2 space-y-1">
+                  <li>The backend container is running: <code className="bg-yellow-100 px-1 rounded">docker ps</code></li>
+                  <li>Backend is accessible: <code className="bg-yellow-100 px-1 rounded">http://localhost:8000/health</code></li>
+                  <li>No firewall is blocking port 8000</li>
+                </ul>
+              </>
+            )}
             <p className="text-xs text-yellow-700 mt-2">
               Or go to Settings to configure a different API key, or use the Admin page to find/create clients.
             </p>

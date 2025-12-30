@@ -3,17 +3,29 @@
  */
 export async function testApiConnection() {
   const apiKey = localStorage.getItem('apiKey');
-  const baseURL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
+  // Use relative URLs to leverage Vite proxy, or use env var if set
+  const baseURL = import.meta.env.VITE_API_BASE_URL || '';
+  // Use 127.0.0.1 instead of localhost to avoid IPv6 issues on Windows
+  const directURL = 'http://127.0.0.1:8000';
   
   console.log('=== API Connection Test ===');
-  console.log('Base URL:', baseURL);
+  console.log('Base URL (proxy):', baseURL || '(using Vite proxy)');
+  console.log('Direct URL:', directURL);
   console.log('API Key:', apiKey ? `${apiKey.substring(0, 10)}...` : 'NOT SET');
   
   try {
-    // Test health endpoint (no auth required)
-    const healthResponse = await fetch(`${baseURL}/health`);
-    const healthData = await healthResponse.json();
-    console.log('✓ Health check:', healthData);
+    // Test health endpoint (no auth required) - try direct connection first
+    let healthResponse;
+    let healthData;
+    try {
+      healthResponse = await fetch(`${directURL}/health`);
+      healthData = await healthResponse.json();
+      console.log('✓ Health check (direct):', healthData);
+    } catch (e) {
+      console.warn('⚠ Direct health check failed, trying proxy...', e.message);
+      // If direct fails, the proxy won't help since /health isn't under /api
+      throw new Error('Cannot reach backend at http://localhost:8000/health');
+    }
     
     if (!apiKey) {
       console.warn('⚠ API key not set. Cannot test authenticated endpoints.');
@@ -24,8 +36,9 @@ export async function testApiConnection() {
       };
     }
     
-    // Test data sources endpoint
-    const dsResponse = await fetch(`${baseURL}/api/v1/data-sources`, {
+    // Test data sources endpoint - use proxy if baseURL is empty, otherwise use direct
+    const apiPath = baseURL ? `${baseURL}/api/v1/data-sources` : '/api/v1/data-sources';
+    const dsResponse = await fetch(apiPath, {
       headers: {
         'X-API-Key': apiKey,
         'Content-Type': 'application/json'
